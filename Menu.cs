@@ -15,14 +15,11 @@ namespace EditorHtml
 
         public static void DrawScreen()
         {
-            Console.Write("+");
-            for (int i = 0; i <= 30; i++)
-                Console.Write("-");
+            int columnsNumber = 30;
+            int linesNumber = 10;
+            DrawLine(columnsNumber);
 
-            Console.Write("+");
-            Console.Write("\n");
-
-            for (int lines = 0; lines <= 10; lines++)
+            for (int lines = 0; lines <= linesNumber; lines++)
             {
                 Console.Write("|");
                 for (int columns = 0; columns <= 30; columns++)
@@ -31,8 +28,13 @@ namespace EditorHtml
                 Console.Write("\n");
             }
 
+            DrawLine(columnsNumber);
+        }
+
+        public static void DrawLine(int columns)
+        {
             Console.Write("+");
-            for (int i = 0; i <= 30; i++)
+            for (int i = 0; i <= columns; i++)
                 Console.Write("-");
 
             Console.Write("+");
